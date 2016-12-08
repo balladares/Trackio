@@ -1,0 +1,26 @@
+{
+  "name": "trackio-app",
+  "version": "1.0.0",
+  "description": "Simple tracking app write in JS",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-load": "^1.1.15",
+    "socket.io": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balladares/Trackio.git"
+  },
+  "author": "balladares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balladares/Trackio/issues"
+  },
+  "homepage": "https://github.com/balladares/Trackio#readme"
+}

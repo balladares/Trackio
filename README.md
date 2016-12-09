@@ -1,2 +1,2 @@
 # Trackio
-Simple tracking app write in JS
+Realtime geolocation tracking, write in JS. 

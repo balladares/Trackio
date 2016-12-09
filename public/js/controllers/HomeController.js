@@ -1,12 +1,18 @@
-app.controller('HomeController', ['$scope', function($scope){
+app.controller('HomeController', ['$scope', 'Tracking', ($scope, Tracking) => {
     $scope.info = {
         title: 'Trackio',
         desc: 'Simple geolocation tracking write em JS'
     }
-
-    var track = io();
-
+     $scope.trackers = [];
+     
     $scope.track = () => {
-        track.emit('position', 'teste');
+        Tracking.emit('position', 'teste');
     }
+
+       Tracking.on('position', (data) => {
+           $scope.trackers.push(data);
+
+           $scope.$apply();
+       });
+   
 }]);

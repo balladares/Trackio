@@ -9,7 +9,7 @@ module.exports = (server) => {
         console.log('User connected');
 
         tracking.on('position', (coords) => {
-            console.log(coords);
+            track.emit('position', {coords});
         })
 
         // User disconnected

@@ -22,7 +22,12 @@
         <h1>{{ info.title }}</h1>
         <h3>{{ info.desc }}</h3>
         <hr>
-        <button class="btn btn-success" ng-click="track()">Testar</button>
+        <!--<div class="positionLogs">
+          <p class="position" ng-repeat="position in route">==> Latitude: {{ position.latitude }} | Longitude: {{position.longitude}}</p>
+          <p class="position">==> Latitude: {{ location.latitude }} | Longitude: {{location.longitude}}</p>
+        </div>-->
+        <button class="btn btn-success" ng-click="track()">Teste</button>
+        {{trackers}}
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -35,8 +40,13 @@
 
     <!-- Angular -->
     <script src="vendors/angular/angular.min.js"></script>
+    <script src="vendors/angular-socket-io/socket.js"></script>
+
     <script src="js/app.js"></script>
+    <script src="js/factorys/TrackingFactory.js"></script>
     <script src="js/controllers/HomeController.js"></script>
+  
+    
 
   </body>
 </html>

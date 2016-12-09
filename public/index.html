@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="trackio">
+<html lang="en" ng-app="trackio" >
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>{{ title }}</title>
+    <title ng-controller="HomeController">{{ info.title }}</title>
  
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,17 +18,19 @@
     <![endif]-->
   </head>
   <body>
-    <div class="container" ng-controller="HomeController">
+    <div class="container text-center " ng-controller="HomeController" >
         <h1>{{ info.title }}</h1>
         <h3>{{ info.desc }}</h3>
         <hr>
-        <!--<div class="positionLogs">
-          <p class="position" ng-repeat="position in route">==> Latitude: {{ position.latitude }} | Longitude: {{position.longitude}}</p>
-          <p class="position">==> Latitude: {{ location.latitude }} | Longitude: {{location.longitude}}</p>
-        </div>-->
-        <button class="btn btn-success" ng-click="track()">Teste</button>
-        {{trackers}}
-    </div>
+        </div>
+
+<div class="container">
+  <ng-view></ng-view>
+</div>
+
+        
+     
+    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
@@ -41,11 +43,14 @@
     <!-- Angular -->
     <script src="vendors/angular/angular.min.js"></script>
     <script src="vendors/angular-socket-io/socket.js"></script>
+    <script src="vendors/ngGeolocation/ngGeolocation.js"></script>
+    <script src="vendors/angular-route/angular-route.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/factorys/TrackingFactory.js"></script>
+    <!--<script src="js/factorys/GeolocationFactory.js"></script>-->
     <script src="js/controllers/HomeController.js"></script>
-  
+    <script src="js/controllers/GetPositionController.js"></script>
     
 
   </body>

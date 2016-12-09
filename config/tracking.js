@@ -8,8 +8,8 @@ module.exports = (server) => {
     track.on('connection', (tracking) => {
         console.log('User connected');
 
-        tracking.on('position', (coords) => {
-            track.emit('position', {coords});
+        tracking.on('position', (geoPosition) => {
+            track.emit('position', JSON.parse(geoPosition));
         })
 
         // User disconnected

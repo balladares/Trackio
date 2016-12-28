@@ -10,6 +10,7 @@ module.exports = (server) => {
 
         tracking.on('position', (geoPosition) => {
             track.emit('position', JSON.parse(geoPosition));
+            console.log(geoPosition);
         })
 
         // User disconnected

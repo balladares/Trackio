@@ -9,7 +9,7 @@ var app = angular.module('trackio', ['btford.socket-io', 'ngGeolocation', 'ngRou
                 templateUrl: '../partials/get-location.html',
                 controller: 'GetPositionController'
             })
-            .when('/get-location/view',{
+            .when('/view-location',{
                 templateUrl: '../partials/view-get-location.html',
                 controller: 'GetPositionController'
             })
